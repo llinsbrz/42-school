@@ -33,8 +33,8 @@ int	ft_isdigit(char *str)
 	while (str[i])
 	{
 		if (!(str[i] >= '0' && str[i] <= '9'))
-			return (0);
+			return (1);
 		i++;
 	}
-	return (1);
+	return (0);
 }
