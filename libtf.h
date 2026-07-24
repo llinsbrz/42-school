@@ -50,19 +50,18 @@ int	ft_isascii(int c)
 int	ft_isprint(int c)
 {
 	if (!(c >= 32 && <= 126))
-		return(0);
-	return(1);
+		return (0);
+	return (1);
 }
 
 int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-
-	while(str[i])
+	while (str[i])
 	{
-	i++;
+		i++;
 	}
-	return(i);
+	return (i);
 }
