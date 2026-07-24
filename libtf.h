@@ -54,3 +54,17 @@ int	ft_isalnum(char *str)
 	}
 	return (1);
 }
+
+int	ft_isascii(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if(!(str[i] >= 0 && str[i] <= 126))
+		return (0);
+		i++;
+	}
+	return (1);
+}
