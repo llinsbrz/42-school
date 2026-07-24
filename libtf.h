@@ -10,61 +10,59 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
+	if (!((c >= 'A' && c <= 'Z')
+			|| (str[i] >= 'a' && str[i] <= 'z')))
 	{
-		if (!((str[i] >= 'A' && str[i] <= 'Z')
-				|| (str[i] >= 'a' && str[i] <= 'z')))
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-int	ft_isdigit(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (!(str[i] >= '0' && str[i] <= '9'))
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-int	ft_isalnum(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (!(str[i] >= '0' && str[i] <= '9')
-			|| (str[i] >= 'a' && str[i] <= 'z')
-			|| (str[i] >= 'A' && str[i] <= 'Z'))
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-int	ft_isascii(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if(!(str[i] >= 0 && str[i] <= 126))
 		return (0);
-		i++;
 	}
 	return (1);
+}
+
+int	ft_isdigit(int c)
+{
+	if (!(c >= '0' && c <= '9'))
+	{
+		return (0);
+	}
+	return (1);
+}
+
+int	ft_isalnum(int c)
+{
+	if (!(c >= '0' && c <= '9')
+		|| (c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z'))
+	{
+		return (0);
+	}
+	return (1);
+}
+
+int	ft_isascii(int c)
+{
+	if (!(c >= 0 && c <= 127))
+		return (0);
+	return (1);
+}
+
+int	ft_isprint(int c)
+{
+	if (!(c >= 32 && <= 126))
+		return(0);
+	return(1);
+}
+
+int	ft_strlen(char *str)
+{
+	int i;
+
+	i = 0;
+
+	while(str[i])
+	{
+	i++;
+	}
+	return(i);
 }
