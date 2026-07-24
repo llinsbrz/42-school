@@ -27,14 +27,30 @@ int	ft_isalpha(char *str)
 
 int	ft_isdigit(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
 	{
 		if (!(str[i] >= '0' && str[i] <= '9'))
-			return (1);
+			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
+}
+
+int	ft_isalnum(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!(str[i] >= '0' && str[i] <= '9')
+			|| (str[i] >= 'a' && str[i] <= 'z')
+			|| (str[i] >= 'A' && str[i] <= 'Z'))
+			return (0);
+		i++;
+	}
+	return (1);
 }
